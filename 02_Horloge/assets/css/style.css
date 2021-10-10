@@ -2,13 +2,9 @@
                     GENERAL
 ********************************************/
 
-html, body {
-    font-size: 20px;    
-}
-
 body {
     font-family: sans-serif;
-    background: #E3E9EE;
+    font-size: 20px;    
 }
 
 header {
@@ -17,12 +13,8 @@ header {
 }
   
 header h1 {
-    font-weight: bold;
     text-transform: uppercase;
-    color: transparent;
-    text-shadow: 0 0 .1rem rgba(255,255,255,0.6);
-    background-color: #810F0F;
-    background-clip: text;
+    color: black;
 }
 
 /********************************************
@@ -37,8 +29,14 @@ header h1 {
     height: 20rem;
     margin: 5rem auto;
     border-radius: 50%;
-    background: #000000;
+    background: #d1d1d1;
 }
+.horloge2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .cadran {
     position: relative;
@@ -49,7 +47,7 @@ header h1 {
 
 .aiguille {
     width: 50%;
-    height: .4rem;
+    height: 5px;
     position: absolute;
     top: 50%;
     background: #fff;
@@ -60,15 +58,15 @@ header h1 {
 }
 
 .aiguille-heure {
-
+    background: rgba(0, 99, 247, 0.3);
 }
 
 .aiguille-minute {
-    background: #CDB91F;
+    background: rgba(255, 225, 0, 0.4);
 }
 
 .aiguille-seconde {
-    background: #CD361F;
+    background: rgba(255, 88, 88, 0.3);
 }
 
 .cercle {

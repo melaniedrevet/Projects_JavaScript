@@ -1,3 +1,29 @@
+function draw() {
+    var canvas = document.getElementById('horloge');
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.font = '25px Arial';
+    ctx.fillStyle = 'white';
+    ctx.fillText("3", 285, 180);
+    ctx.fillText("6", 155, 300);
+    ctx.fillText("9", 25, 180);
+    ctx.fillText("12", 145, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.font = '20px Arial';
+    ctx.fillStyle = 'white';
+    ctx.fillText("1", 220, 60);
+    ctx.fillText("2", 270, 110);
+    ctx.fillText("4", 270, 245);
+    ctx.fillText("5", 220, 285);
+    ctx.fillText("7", 90, 285);
+    ctx.fillText("8", 45, 245);
+    ctx.fillText("10", 45, 110);
+    ctx.fillText("11", 90, 60);
+}
+
 /**
  * Déclaration des variables 
 */
@@ -5,7 +31,6 @@
 var heure = document.getElementsByClassName('aiguille-heure');
 var minute = document.getElementsByClassName('aiguille-minute');
 var seconde = document.getElementsByClassName('aiguille-seconde');
-
 
 /**
  * Fonction pour définir la date actuelle
@@ -46,3 +71,4 @@ function setDate() {
 */
 
 setInterval(setDate, 1000);
+draw();

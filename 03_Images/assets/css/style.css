@@ -1,0 +1,109 @@
+/********************************************
+                    GENERAL
+********************************************/
+
+body {
+    font-family: sans-serif;  
+}
+
+header {
+    text-align: center;
+    padding: 3.5rem;
+}
+  
+header h1 {
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 18px;
+}
+
+label {
+    font-size: 16px;
+}
+
+/********************************************
+                    SECTIONS
+********************************************/
+
+section {
+    width: 50%;
+    position: fixed;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+section.left {
+    background: #cecece;
+    right: 50%;
+}
+
+section.right {
+    background: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+}
+
+/********************************************
+                    PARAMETRES
+********************************************/
+
+.parameters {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.parameters input {
+    margin: 16px 0;
+}
+
+.param {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/********************************************
+                    IMAGE
+********************************************/
+
+section.right img {
+    width: 30rem;
+    margin: 0 auto;
+
+    /**
+        --------------------
+        filter
+        --> Permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, ...
+        --> https://developer.mozilla.org/fr/docs/Web/CSS/filter
+        --------------------
+        drop-shadow() 
+        --> Permet d'appliquer une ombre portée sur une image
+        --> Paramètres : espace (vertical et horizontal), flou et couleur
+        --> https://developer.mozilla.org/fr/docs/Web/CSS/filter-function/drop-shadow()
+        --------------------
+        hue-rotate() 
+        --> Permet d'appliquer une rotation de teinte sur une image
+        --> Paramètres : teinte et échelle de gris
+        --> https://developer.mozilla.org/fr/docs/Web/CSS/filter-function/hue-rotate()
+        --------------------
+        Deux tirets -- 
+        --> Représente des propriétés personnalisées qui contiennent une valeur qui pourra être réutilisée dans le document grâce à la fonction var
+        --> https://developer.mozilla.org/fr/docs/Web/CSS/--*
+        --------------------
+        var()
+        --> Utilisée pour insérer la valeur d'une propriété personnalisée 
+        --> https://developer.mozilla.org/en-US/docs/Web/CSS/var()
+        --------------------
+
+    */
+
+    filter: drop-shadow(var(--spacing) var(--spacing) var(--blur) var(--base)) hue-rotate(var(--hue)) grayscale(var(--grayscale));
+}
